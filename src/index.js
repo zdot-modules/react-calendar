@@ -20,20 +20,20 @@ const spacingWidth = 8
 
 // Day ////////////////////////////////////////////////////////////////////////
 
+/** Styling classes for day component */
 const dayClasses = createStyles({
   root: {
-    // border: '1px solid black',
     display: 'inline-block',
     height: '100%',
     width: '100%',
     boxSizing: 'border-box'
   },
   content: {
-    padding: `${spacingWidth / 2}px`,
+    boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
-    boxSizing: 'border-box',
-    height: 'inherit'
+    height: 'inherit',
+    padding: `${spacingWidth / 2}px`
   },
   dateLabel: {
     alignSelf: 'flex-start',
@@ -44,11 +44,13 @@ const dayClasses = createStyles({
 /**
  * Component to represent a day on the calendar
  * @param {object} props - Component properties
+ * @param {React.Children} props.children - Things to display in day
+ * @param {string} props.contentClassName - CSS class names for the date component's content
  * @param {Date} props.date - Date
- * @param {object} props.classes - CSS class names for styling
- * @param {string} props.classes.root - CSS class names for styling
- * @param {string} props.classes.content - CSS class names for styling
- * @return {React.Component} - Component
+ * @param {string} props.dateLabelClassName - CSS class names for the date label
+ * @param {Function} props.onClick - Callback for click event
+ * @param {string} props.rootClassName - CSS class names for the root element
+ * @return {React.Component} - Day Component
  */
 export const Day = ({
   children,
@@ -60,8 +62,8 @@ export const Day = ({
 }) => (
   <div
     className={`${dayClasses.root} ${rootClassName}`}
-    title={Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(date)}
     onClick={onClick}
+    title={Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(date)}
   >
     <div className={`${dayClasses.content} ${contentClassName}`}>
       <h6 className={`${dayClasses.dateLabel} ${dateLabelClassName}`}>
@@ -74,9 +76,9 @@ export const Day = ({
 
 // Week ///////////////////////////////////////////////////////////////////////
 
+/** Styling classes for week component */
 const weekClasses = createStyles({
   root: {
-    //border: '1px solid black',
     display: 'grid',
     gridGap: '1px',
     gridTemplateColumns:
@@ -93,19 +95,17 @@ const weekClasses = createStyles({
 /**
  * Row of days to represent a week on a calendar
  * @param {object} props - Component properties
- * @param {number} props.date - Date in the week to render
+ * @param {Date} props.date - Date in the week to render
+ * @param {Date} props.displayForMonth - Date of month this week is for (to determine which days to fade out)
+ * @param {string} rootClassName - Class name for root element
  * @param {React.Component} [props.DayComponent=Day] - Component to render for a day
  * @return {React.Component} - Component
  */
 const Week = ({ date, displayForMonth, rootClassName, DayComponent = Day }) => {
-  /** Date of Sunday for this week */
   const firstDayOfWeek = startOfWeek(date)
 
   return (
-    <div
-      className={`${weekClasses.root} ${rootClassName}`}
-      data-component-id={'week'}
-    >
+    <div className={`${weekClasses.root} ${rootClassName}`}>
       {Array.from({ length: 7 }, (item, idx) =>
         addDays(firstDayOfWeek, idx)
       ).map((item, idx) => {
@@ -159,10 +159,10 @@ const Month = ({ date, DayComponent, WeekComponent = Week }) => {
     <div className={monthClasses.root}>
       {Array.from({ length: numberOfWeeksInMonth }, (item, idx) => (
         <WeekComponent
+          DayComponent={DayComponent}
           date={startOfWeek(addWeeks(firstDayOfMonth, idx))}
           displayForMonth={firstDayOfMonth}
           rootClassName={idx > 0 ? monthClasses.weekRoot : null}
-          DayComponent={DayComponent}
         />
       ))}
     </div>
@@ -171,6 +171,7 @@ const Month = ({ date, DayComponent, WeekComponent = Week }) => {
 
 // Header /////////////////////////////////////////////////////////////////////
 
+/** Styling classes for month/year haeding component */
 const monthYearHeadingClasses = createStyles({
   root: {
     textAlign: 'center'
@@ -194,6 +195,7 @@ const MonthYearHeading = ({ date }) => (
   </div>
 )
 
+/** Styling classes for for the day of week component */
 const dayOfWeekLabelRowClasses = createStyles({
   root: {
     display: 'grid',
@@ -229,10 +231,10 @@ const DayOfWeekLabelRow = () => {
 
 const calendarClasses = createStyles({
   root: {
+    boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
-    boxSizing: 'border-box'
+    overflow: 'hidden'
   }
 })
 
@@ -241,8 +243,9 @@ const calendarClasses = createStyles({
  * @param {object} props - Component properties
  * @param {Date} props.date - Currently selected date
  * @param {React.Component} [props.DayComponent] - Component to render for a day
- * @param {React.Component} [props.WeekComponent] - Component to render for a week
  * @param {React.Component} [props.MonthComponent=Month] - Component to render for a month
+ * @param {React.Component} [props.WeekComponent] - Component to render for a week
+ * @param {string} [className] - Class name to apply to root element
  * @return {React.Component} - Component
  */
 const Calendar = ({
