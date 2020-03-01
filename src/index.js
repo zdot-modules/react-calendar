@@ -5,7 +5,14 @@
 import * as React from 'react'
 import { createUseStyles, JssProvider } from 'react-jss'
 import pkg from '../package.json'
-import {addDays, addWeeks, startOfWeek, startOfMonth, isSameMonth, getWeeksInMonth} from './util.js'
+import {
+  addDays,
+  addWeeks,
+  startOfWeek,
+  startOfMonth,
+  isSameMonth,
+  getWeeksInMonth
+} from './util/date-time.js'
 
 // Types/Constants ////////////////////////////////////////////////////////////
 

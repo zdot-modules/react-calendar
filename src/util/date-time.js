@@ -1,4 +1,10 @@
+/** @fileoverview Date utilities */
 
+/**
+ * Clone Date
+ * @param  {Date} date - Date to clone
+ * @return {Date} - Cloned `date`
+ */
 const cloneDate = date => {
   const clonedDate = new Date()
 
@@ -7,6 +13,12 @@ const cloneDate = date => {
   return clonedDate
 }
 
+/**
+ * Add days to a date
+ * @param {Date} date - Date to add days to
+ * @param {number} numberOfDaysToAdd - Number of days to add
+ * @return {Date} - New date based on `date` with `numberOfDaysToAdd` added
+ */
 export const addDays = (date, numberOfDaysToAdd) => {
   const clonedDate = cloneDate(date)
 
@@ -15,10 +27,21 @@ export const addDays = (date, numberOfDaysToAdd) => {
   return clonedDate
 }
 
+/**
+ * Add weeks to a date
+ * @param {Date} date - Date to add weeks to
+ * @param {number} numberOfWeeksToAdd - Number of weeks to add
+ * @return {Date} - New date based on `date` with `numberOfWeeksToAdd` added
+ */
 export const addWeeks = (date, numberOfWeeksToAdd) => {
   return addDays(date, numberOfWeeksToAdd * 7)
 }
 
+/**
+ * Get the first of the month
+ * @param {Date} date - Date to find the first of the month for
+ * @return {Date} - New date based on `date` set to the first of the month
+ */
 export const startOfMonth = date => {
   const clonedDate = cloneDate(date)
 
@@ -28,6 +51,11 @@ export const startOfMonth = date => {
   return clonedDate
 }
 
+/**
+ * Get the day of the week
+ * @param {Date} date - Date to find the first day of the week for
+ * @return {Date} - New date based on `date` set to the first day if the week
+ */
 export const startOfWeek = date => {
   const clonedDate = cloneDate(date)
   const currentDayOfWeek = clonedDate.getDay()
@@ -38,6 +66,12 @@ export const startOfWeek = date => {
   return clonedDate
 }
 
+/**
+ * Determine if 2 date occur in both the same year and month
+ * @param  {Date}  date1 - First date
+ * @param  {Date}  date2 - Second date
+ * @return {Boolean} - Whether or not `date1` and `date2` occur in both the same year and month
+ */
 export const isSameMonth = (date1, date2) => {
   return (
     date1.getFullYear() === date2.getFullYear() &&
@@ -45,6 +79,11 @@ export const isSameMonth = (date1, date2) => {
   )
 }
 
+/**
+ * Get the number of days in a month
+ * @param  {Date} date - Date of month to get the number of days of
+ * @return {number} - Number of days in month of `date`
+ */
 export const getDaysInMonth = date => {
   const clonedDate = cloneDate(date)
 
@@ -52,9 +91,13 @@ export const getDaysInMonth = date => {
   clonedDate.setDate(0)
 
   return clonedDate.getDate()
-
 }
 
+/**
+ * Get the number of weeks in a month
+ * @param  {Date} date - Date of month to get weeks for
+ * @return {number} - Number of weeks in month of `date`
+ */
 export const getWeeksInMonth = date => {
   /** Date */
   const clonedDate = cloneDate(date)
@@ -75,10 +118,10 @@ export const getWeeksInMonth = date => {
   const remainingDaysInMonth = daysInMonth - daysUsedInFirstWeek
 
   /** Number of whole weeks in the month */
-  let weeks = 1 + (remainingDaysInMonth / 7)
+  let weeks = 1 + remainingDaysInMonth / 7
 
   // If there are days left over after the whole weeks are accounted for, add another week */
-  if(remainingDaysInMonth % 7 !== 0){
+  if (remainingDaysInMonth % 7 !== 0) {
     weeks = weeks + 1
   }
 
