@@ -3,25 +3,36 @@
  */
 
 import * as React from 'react'
-import {
-  addDays,
-  addWeeks,
-  getWeeksInMonth,
-  isSameMonth,
-  startOfMonth,
-  startOfWeek
-} from 'date-fns'
-import createStyles from 'simplestyle-js'
+import { createUseStyles, JssProvider } from 'react-jss'
+import pkg from '../package.json'
+import {addDays, addWeeks, startOfWeek, startOfMonth, isSameMonth, getWeeksInMonth} from './util.js'
 
 // Types/Constants ////////////////////////////////////////////////////////////
 
 /** Basis for spacing width */
 const spacingWidth = 8
 
+// Styling ////////////////////////////
+
+/**
+ * Setup counter for classname generator function
+ * @see: https://cssinjs.org/react-jss?v=v10.0.3#class-name-generator-options
+ * @see: https://cssinjs.org/jss-api?v=v10.0.3#generate-your-class-names
+ * @return {Function} - Function to generate classnames
+ */
+const createGenerateId = () => {
+  let counter = 0
+
+  return (rule, sheet) => `${pkg.name}:${pkg.version}--${rule.key}-${counter++}`
+}
+
+/** The classname generator function */
+const generateId = createGenerateId()
+
 // Day ////////////////////////////////////////////////////////////////////////
 
 /** Styling classes for day component */
-const dayClasses = createStyles({
+const createDayClasses = createUseStyles({
   root: {
     display: 'inline-block',
     height: '100%',
@@ -59,25 +70,28 @@ export const Day = ({
   dateLabelClassName,
   onClick,
   rootClassName
-}) => (
-  <div
-    className={`${dayClasses.root} ${rootClassName}`}
-    onClick={onClick}
-    title={Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(date)}
-  >
-    <div className={`${dayClasses.content} ${contentClassName}`}>
-      <h6 className={`${dayClasses.dateLabel} ${dateLabelClassName}`}>
-        {Intl.DateTimeFormat('en-US', { day: 'numeric' }).format(date)}
-      </h6>
-      {children}
+}) => {
+  const classes = createDayClasses()
+  return (
+    <div
+      className={`${classes.root} ${rootClassName}`}
+      onClick={onClick}
+      title={Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(date)}
+    >
+      <div className={`${classes.content} ${contentClassName}`}>
+        <h6 className={`${classes.dateLabel} ${dateLabelClassName}`}>
+          {Intl.DateTimeFormat('en-US', { day: 'numeric' }).format(date)}
+        </h6>
+        {children}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 // Week ///////////////////////////////////////////////////////////////////////
 
 /** Styling classes for week component */
-const weekClasses = createStyles({
+const createWeekClasses = createUseStyles({
   root: {
     display: 'grid',
     gridGap: '1px',
@@ -102,22 +116,23 @@ const weekClasses = createStyles({
  * @return {React.Component} - Component
  */
 const Week = ({ date, displayForMonth, rootClassName, DayComponent = Day }) => {
+  const classes = createWeekClasses()
   const firstDayOfWeek = startOfWeek(date)
 
   return (
-    <div className={`${weekClasses.root} ${rootClassName}`}>
+    <div className={`${classes.root} ${rootClassName}`}>
       {Array.from({ length: 7 }, (item, idx) =>
         addDays(firstDayOfWeek, idx)
       ).map((item, idx) => {
         const className = isSameMonth(item, displayForMonth)
           ? null
-          : weekClasses.differentMonth
+          : classes.differentMonth
 
         return (
           <DayComponent
             date={item}
             dateLabelClassName={className}
-            rootClassName={idx > 0 ? weekClasses.dayRoot : null}
+            rootClassName={idx > 0 ? classes.dayRoot : null}
           />
         )
       })}
@@ -138,7 +153,7 @@ const Week = ({ date, displayForMonth, rootClassName, DayComponent = Day }) => {
 const Month = ({ date, DayComponent, WeekComponent = Week }) => {
   const firstDayOfMonth = startOfMonth(date)
   const numberOfWeeksInMonth = getWeeksInMonth(date)
-  const monthClasses = createStyles({
+  const createMonthClasses = createUseStyles({
     root: {
       border: '1px solid black',
       boxSizing: 'border-box',
@@ -155,14 +170,16 @@ const Month = ({ date, DayComponent, WeekComponent = Week }) => {
     }
   })
 
+  const classes = createMonthClasses()
+
   return (
-    <div className={monthClasses.root}>
+    <div className={classes.root}>
       {Array.from({ length: numberOfWeeksInMonth }, (item, idx) => (
         <WeekComponent
           DayComponent={DayComponent}
           date={startOfWeek(addWeeks(firstDayOfMonth, idx))}
           displayForMonth={firstDayOfMonth}
-          rootClassName={idx > 0 ? monthClasses.weekRoot : null}
+          rootClassName={idx > 0 ? classes.weekRoot : null}
         />
       ))}
     </div>
@@ -172,7 +189,7 @@ const Month = ({ date, DayComponent, WeekComponent = Week }) => {
 // Header /////////////////////////////////////////////////////////////////////
 
 /** Styling classes for month/year haeding component */
-const monthYearHeadingClasses = createStyles({
+const createMonthYearHeadingClasses = createUseStyles({
   root: {
     textAlign: 'center'
   }
@@ -184,19 +201,22 @@ const monthYearHeadingClasses = createStyles({
  * @param {Date} props.date - Date
  * @return {React.Component} - Component
  */
-const MonthYearHeading = ({ date }) => (
-  <div className={monthYearHeadingClasses.root}>
-    <h1>
-      {new Intl.DateTimeFormat('en-US', {
-        month: 'long',
-        year: 'numeric'
-      }).format(date)}
-    </h1>
-  </div>
-)
+const MonthYearHeading = ({ date }) => {
+  const classes = createMonthYearHeadingClasses()
+  return (
+    <div className={classes.root}>
+      <h1>
+        {new Intl.DateTimeFormat('en-US', {
+          month: 'long',
+          year: 'numeric'
+        }).format(date)}
+      </h1>
+    </div>
+  )
+}
 
 /** Styling classes for for the day of week component */
-const dayOfWeekLabelRowClasses = createStyles({
+const createDayOfWeekLabelRowClasses = createUseStyles({
   root: {
     display: 'grid',
     gridTemplateColumns:
@@ -212,12 +232,13 @@ const dayOfWeekLabelRowClasses = createStyles({
  * @return {React.Component} - Component
  */
 const DayOfWeekLabelRow = () => {
+  const classes = createDayOfWeekLabelRowClasses()
   const firstDayOfWeek = startOfWeek(new Date())
 
   return (
-    <div className={dayOfWeekLabelRowClasses.root}>
+    <div className={classes.root}>
       {Array.from({ length: 7 }, (item, idx) => (
-        <div className={dayOfWeekLabelRowClasses.text}>
+        <div className={classes.text}>
           {Intl.DateTimeFormat('en-US', { weekday: 'narrow' }).format(
             addDays(firstDayOfWeek, idx)
           )}
@@ -229,7 +250,7 @@ const DayOfWeekLabelRow = () => {
 
 // Main ///////////////////////////////////////////////////////////////////////
 
-const calendarClasses = createStyles({
+const createCalendarClasses = createUseStyles({
   root: {
     boxSizing: 'border-box',
     display: 'flex',
@@ -254,16 +275,26 @@ const Calendar = ({
   WeekComponent,
   className,
   date = new Date()
-}) => (
-  <div className={`${calendarClasses.root} ${className}`}>
-    <MonthYearHeading date={date} />
-    <DayOfWeekLabelRow />
-    <MonthComponent
-      date={date}
-      WeekComponent={WeekComponent}
-      DayComponent={DayComponent}
-    />
-  </div>
-)
+}) => {
+  const Test = () => {
+    const classes = createCalendarClasses()
+    return (
+      <div className={`${classes.root} ${className}`}>
+        <MonthYearHeading date={date} />
+        <DayOfWeekLabelRow />
+        <MonthComponent
+          date={date}
+          WeekComponent={WeekComponent}
+          DayComponent={DayComponent}
+        />
+      </div>
+    )
+  }
+  return (
+    <JssProvider generateId={generateId}>
+      <Test />
+    </JssProvider>
+  )
+}
 
 export default Calendar

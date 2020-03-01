@@ -4,9 +4,9 @@
   "description": "A react calendar component (sample code)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
-		"deploy-storybook": "storybook-to-ghpages",
+    "deploy-storybook": "storybook-to-ghpages",
     "build-storybook": "build-storybook"
   },
   "repository": {
@@ -20,19 +20,24 @@
   },
   "homepage": "https://github.com/danwoods/react-calendar-sample#readme",
   "dependencies": {
-    "date-fns": "^2.9.0",
     "react": "^16.12.0",
+    "react-jss": "^10.0.3",
     "simplestyle-js": "^1.0.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
-    "@babel/core": "^7.8.3",
     "@storybook/addon-actions": "^5.3.4",
     "@storybook/addon-links": "^5.3.4",
     "@storybook/addons": "^5.3.4",
     "@storybook/react": "^5.3.4",
     "@storybook/storybook-deployer": "^2.8.1",
-    "babel-loader": "^8.0.6"
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.12.0"
   }
 }

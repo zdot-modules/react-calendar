@@ -1,6 +1,7 @@
 import Calendar, { Day } from '../src/index.js'
 import React from 'react'
 import createStyles from 'simplestyle-js'
+import { createUseStyles } from 'react-jss'
 import { action } from '@storybook/addon-actions'
 import {
   addDays,
@@ -28,7 +29,7 @@ export default {
 
 export const Default = () => <Calendar />
 
-const withNavigationClasses = createStyles({
+const createWithNavigationClasses = createUseStyles({
   root: {
     width: '256px',
     marginTop: '26px'
@@ -45,20 +46,15 @@ const withNavigationClasses = createStyles({
 })
 
 export const WithNavigation = props => {
+  const classes = createWithNavigationClasses()
   const [selectedMonth, setSelectedMonth] = React.useState(new Date())
 
   const SimpleNavigation = ({ onNextClick, onPrevClick }) => (
-    <div className={withNavigationClasses.navigation}>
-      <div
-        className={withNavigationClasses.navigationButton}
-        onClick={onPrevClick}
-      >
+    <div className={classes.navigation}>
+      <div className={classes.navigationButton} onClick={onPrevClick}>
         {'<'}
       </div>
-      <div
-        className={withNavigationClasses.navigationButton}
-        onClick={onNextClick}
-      >
+      <div className={classes.navigationButton} onClick={onNextClick}>
         {'>'}
       </div>
     </div>
@@ -67,7 +63,7 @@ export const WithNavigation = props => {
   const Navigation = props.NavigationComponent || SimpleNavigation
 
   return (
-    <div className={`${withNavigationClasses.root} ${props.rootClassName}`}>
+    <div className={`${classes.root} ${props.rootClassName}`}>
       <Navigation
         onNextClick={() => setSelectedMonth(addMonths(selectedMonth, 1))}
         onPrevClick={() => setSelectedMonth(subMonths(selectedMonth, 1))}
