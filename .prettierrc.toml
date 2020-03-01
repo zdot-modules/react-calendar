@@ -1,5 +1,6 @@
 # .prettierrc.toml
 trailingComma = "none"
-tabWidth = 2
 semi = false
 singleQuote = true
+jsxSingleQuote = true
+quoteProps = "consistent"
