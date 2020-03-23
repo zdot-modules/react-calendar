@@ -1,3 +1,4 @@
+// @flow
 /** @fileoverview Date utilities */
 
 /**
@@ -5,8 +6,8 @@
  * @param  {Date} date - Date to clone
  * @return {Date} - Cloned `date`
  */
-const cloneDate = date => {
-  const clonedDate = new Date()
+const cloneDate = (date: Date): Date => {
+  const clonedDate: Date = new Date()
 
   clonedDate.setTime(date.getTime())
 
@@ -19,8 +20,8 @@ const cloneDate = date => {
  * @param {number} numberOfDaysToAdd - Number of days to add
  * @return {Date} - New date based on `date` with `numberOfDaysToAdd` added
  */
-export const addDays = (date, numberOfDaysToAdd) => {
-  const clonedDate = cloneDate(date)
+export const addDays = (date: Date, numberOfDaysToAdd: number): Date => {
+  const clonedDate: Date = cloneDate(date)
 
   clonedDate.setDate(clonedDate.getDate() + numberOfDaysToAdd)
 
@@ -33,7 +34,7 @@ export const addDays = (date, numberOfDaysToAdd) => {
  * @param {number} numberOfWeeksToAdd - Number of weeks to add
  * @return {Date} - New date based on `date` with `numberOfWeeksToAdd` added
  */
-export const addWeeks = (date, numberOfWeeksToAdd) => {
+export const addWeeks = (date: Date, numberOfWeeksToAdd: number): Date => {
   return addDays(date, numberOfWeeksToAdd * 7)
 }
 
@@ -42,8 +43,8 @@ export const addWeeks = (date, numberOfWeeksToAdd) => {
  * @param {Date} date - Date to find the first of the month for
  * @return {Date} - New date based on `date` set to the first of the month
  */
-export const startOfMonth = date => {
-  const clonedDate = cloneDate(date)
+export const startOfMonth = (date: Date) => {
+  const clonedDate: Date = cloneDate(date)
 
   clonedDate.setDate(1)
   clonedDate.setHours(0, 0, 0, 0)
@@ -56,7 +57,7 @@ export const startOfMonth = date => {
  * @param {Date} date - Date to find the first day of the week for
  * @return {Date} - New date based on `date` set to the first day if the week
  */
-export const startOfWeek = date => {
+export const startOfWeek = (date: Date): Date => {
   const clonedDate = cloneDate(date)
   const currentDayOfWeek = clonedDate.getDay()
 
@@ -72,7 +73,7 @@ export const startOfWeek = date => {
  * @param  {Date}  date2 - Second date
  * @return {Boolean} - Whether or not `date1` and `date2` occur in both the same year and month
  */
-export const isSameMonth = (date1, date2) => {
+export const isSameMonth = (date1: Date, date2: Date): boolean => {
   return (
     date1.getFullYear() === date2.getFullYear() &&
     date1.getMonth() === date2.getMonth()
@@ -84,7 +85,7 @@ export const isSameMonth = (date1, date2) => {
  * @param  {Date} date - Date of month to get the number of days of
  * @return {number} - Number of days in month of `date`
  */
-export const getDaysInMonth = date => {
+export const getDaysInMonth = (date: Date): number => {
   const clonedDate = cloneDate(date)
 
   clonedDate.setMonth(clonedDate.getMonth() + 1)
@@ -98,7 +99,7 @@ export const getDaysInMonth = date => {
  * @param  {Date} date - Date of month to get weeks for
  * @return {number} - Number of weeks in month of `date`
  */
-export const getWeeksInMonth = date => {
+export const getWeeksInMonth = (date: Date): number => {
   /** Date */
   const clonedDate = cloneDate(date)
 

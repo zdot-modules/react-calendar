@@ -1,0 +1,17 @@
+.CLASSNAME-day-root {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.CLASSNAME-day-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  padding: 4px;
+}
+.CLASSNAME-day-date-label {
+  align-self: flex-start;
+  margin-top: 0
+}

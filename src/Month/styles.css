@@ -1,0 +1,11 @@
+.CLASSNAME-month-root {
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto;
+    height: 100%;
+    width: 100%;
+  }
+.CLASSNAME-month-week-root {
+  border-top: 1px solid black;
+}

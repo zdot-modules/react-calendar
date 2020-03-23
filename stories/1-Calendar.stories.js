@@ -1,4 +1,5 @@
-import Calendar, { Day } from '../src/index.js'
+import Calendar from '../src/index.js'
+import { Day } from '../src/Day'
 import React from 'react'
 import createStyles from 'simplestyle-js'
 import { createUseStyles } from 'react-jss'
@@ -187,10 +188,10 @@ export const LightlyStyled = props => {
 
   const Navigation = ({ onPrevClick, onNextClick }) => (
     <div className={styledClasses.navigation}>
-      <IconButton aria-label="previous month">
+      <IconButton aria-label='previous month'>
         <PrevIcon onClick={onPrevClick} />
       </IconButton>
-      <IconButton aria-label="next month">
+      <IconButton aria-label='next month'>
         <NextIcon onClick={onNextClick} />
       </IconButton>
     </div>
@@ -200,8 +201,8 @@ export const LightlyStyled = props => {
     <ThemeProvider theme={theme}>
       <div>
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
         />
         <Typography>
           <WithEvents

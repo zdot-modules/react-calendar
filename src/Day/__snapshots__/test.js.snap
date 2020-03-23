@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day component Basic Day 1`] = `
+<div
+  className="TEST-day-root "
+  title="January 1, 2000"
+>
+  <div
+    className="TEST-day-content "
+  >
+    <h6
+      className="TEST-day-date-label "
+    >
+      1
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`Day component Day with children 1`] = `
+<div
+  className="TEST-day-root "
+  title="January 1, 2000"
+>
+  <div
+    className="TEST-day-content "
+  >
+    <h6
+      className="TEST-day-date-label "
+    >
+      1
+    </h6>
+    kids!
+  </div>
+</div>
+`;
+
+exports[`Day component Day with full props 1`] = `
+<div
+  className="TEST-day-root rcn"
+  onClick={[Function]}
+  title="January 1, 2000"
+>
+  <div
+    className="TEST-day-content ccn"
+  >
+    <h6
+      className="TEST-day-date-label dlcn"
+    >
+      1
+    </h6>
+    kids!
+  </div>
+</div>
+`;

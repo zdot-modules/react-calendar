@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Week component Basic Week 1`] = `
+<div
+  className="TEST-week-root "
+  data-component-id="week"
+>
+  <div
+    className="TEST-day-root "
+    title="December 26, 1999"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        26
+      </h6>
+    </div>
+  </div>
+  <div
+    className="TEST-day-root TEST-week-day-root"
+    title="December 27, 1999"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        27
+      </h6>
+    </div>
+  </div>
+  <div
+    className="TEST-day-root TEST-week-day-root"
+    title="December 28, 1999"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        28
+      </h6>
+    </div>
+  </div>
+  <div
+    className="TEST-day-root TEST-week-day-root"
+    title="December 29, 1999"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        29
+      </h6>
+    </div>
+  </div>
+  <div
+    className="TEST-day-root TEST-week-day-root"
+    title="December 30, 1999"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        30
+      </h6>
+    </div>
+  </div>
+  <div
+    className="TEST-day-root TEST-week-day-root"
+    title="December 31, 1999"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        31
+      </h6>
+    </div>
+  </div>
+  <div
+    className="TEST-day-root TEST-week-day-root"
+    title="January 1, 2000"
+  >
+    <div
+      className="TEST-day-content "
+    >
+      <h6
+        className="TEST-day-date-label TEST-different-month"
+      >
+        1
+      </h6>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Week component Week with Day component 1`] = `
+<div
+  className="TEST-week-root "
+  data-component-id="week"
+>
+  day comp
+  day comp
+  day comp
+  day comp
+  day comp
+  day comp
+  day comp
+</div>
+`;
+
+exports[`Week component Week with full props 1`] = `
+<div
+  className="TEST-week-root rcn"
+  data-component-id="week"
+>
+  day comp
+  day comp
+  day comp
+  day comp
+  day comp
+  day comp
+  day comp
+</div>
+`;

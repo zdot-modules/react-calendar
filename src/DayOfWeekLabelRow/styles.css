@@ -1,0 +1,8 @@
+.CLASSNAME-dowlr-root {
+  display: grid;
+  grid-template-columns:
+    [day-0] calc(100% / 7) [day-1] calc(100% / 7) [day-2] calc(100% / 7) [day-3] calc(100% / 7) [day-4] calc(100% / 7) [day-5] calc(100% / 7) [day-6] calc(100% / 7);
+}
+.CLASSNAME-dowlr-text {
+  text-align: center;
+}
