@@ -1,13 +1,14 @@
 {
   "name": "react-calendar-sample",
   "version": "1.0.0",
-  "description": "A react calendar component (sample code)",
+  "description": "A zero-dependency calendar component with 100% test and type coverage.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "deploy-storybook": "storybook-to-ghpages",
-    "build-storybook": "build-storybook",
+    "deploy:storybook": "storybook-to-ghpages",
+    "build:storybook": "build-storybook",
+    "build:README": "projectz compile",
     "flow": "flow",
     "lint": "eslint \"./src/**\""
   },
@@ -45,9 +46,20 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
+    "projectz": "^1.19.0",
     "react-jss": "^10.0.3",
     "react-test-renderer": "^16.12.0",
     "simplestyle-js": "^1.0.3",
     "string-replace-loader": "^2.2.0"
+  },
+  "maintainers": [],
+  "contributors": [
+    "Dan Woodson (http://danwoods.github.com/)"
+  ],
+  "badges": {
+    "list": [
+      "daviddm",
+      "daviddmdev"
+    ]
   }
 }
