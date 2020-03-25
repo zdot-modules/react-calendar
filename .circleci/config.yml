@@ -32,6 +32,10 @@ jobs:
       - image: circleci/node:10-browsers
     steps:
       - run:
+          name: npm i
+          command: |
+            npm i
+      - run:
           name: Running tests
           command: |
             npm run test
