@@ -4,7 +4,6 @@
 
 <!-- /TITLE -->
 
-
 <!-- BADGES/ -->
 
 <span class="badge-daviddm"><a href="https://david-dm.org/danwoods/react-calendar-sample" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/danwoods/react-calendar-sample.svg" alt="Dependency Status" /></a></span>
@@ -12,19 +11,18 @@
 
 <!-- /BADGES -->
 
-
 <!-- DESCRIPTION/ -->
 
 A zero-dependency calendar component with 100% test and type coverage.
 
 <!-- /DESCRIPTION -->
 
-
 <!-- INSTALL/ -->
 
 <h2>Install</h2>
 
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+
 <ul>
 <li>Install: <code>npm install --save react-calendar-sample</code></li>
 <li>Import: <code>import * as pkg from ('react-calendar-sample')</code></li>
@@ -32,7 +30,6 @@ A zero-dependency calendar component with 100% test and type coverage.
 </ul>
 
 <!-- /INSTALL -->
-
 
 ## Usage
 
