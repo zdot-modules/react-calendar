@@ -27,6 +27,14 @@ jobs:
           name: Running In A Container With Node
           command: |
             node -v
+  Test:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - run:
+          name: Running tests
+          command: |
+            npm run test
   Now-Complete:
     docker:
       - image: alpine:3.7
