@@ -11,6 +11,8 @@
 
 <!-- /BADGES -->
 
+[![danwoods](https://circleci.com/gh/danwoods/react-calendar-sample/tree/master.svg?style=shield)](https://circleci.com/gh/danwoods/react-calendar-sample/tree/master)
+
 <!-- DESCRIPTION/ -->
 
 A zero-dependency calendar component with 100% test and type coverage.
