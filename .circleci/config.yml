@@ -27,7 +27,7 @@ jobs:
           name: Running In A Container With Node
           command: |
             node -v
-  Test-ing:
+  Test:
     docker:
       - image: circleci/node:10-browsers
     steps:
@@ -55,6 +55,9 @@ workflows:
       - Run-With-Node:
           requires:
             - Hello-World
+      - Test:
+          requires:
+            - I-Have-Code
       - Hold-For-Approval:
           type: approval
           requires:
