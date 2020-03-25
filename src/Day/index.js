@@ -36,7 +36,11 @@ export const Day = ({
   <div
     className={`${CLASSNAME}-day-root ${rootClassName || ''}`}
     onClick={onClick}
-    title={Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(date)}
+    title={Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }).format(date)}
   >
     <div className={`${CLASSNAME}-day-content ${contentClassName || ''}`}>
       <h6 className={`${CLASSNAME}-day-date-label ${dateLabelClassName || ''}`}>
