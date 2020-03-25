@@ -58,17 +58,9 @@ workflows:
       - I-Have-Code:
           requires:
             - Hello-World
-      - Run-With-Node:
-          requires:
-            - Hello-World
       - Test:
           requires:
             - I-Have-Code
-      - Hold-For-Approval:
-          type: approval
-          requires:
-            - Run-With-Node
-            - I-Have-Code
       - Now-Complete:
           requires:
-            - Hold-For-Approval
+            - Test
