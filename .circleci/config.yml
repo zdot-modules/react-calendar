@@ -34,6 +34,7 @@ jobs:
       - run:
           name: npm i
           command: |
+            ls -al
             npm i
       - run:
           name: Running tests
