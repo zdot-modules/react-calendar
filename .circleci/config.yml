@@ -27,7 +27,7 @@ jobs:
           name: Running In A Container With Node
           command: |
             node -v
-  Test:
+  Test-ing:
     docker:
       - image: circleci/node:10-browsers
     steps:
