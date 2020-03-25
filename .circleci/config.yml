@@ -54,13 +54,4 @@ workflows:
   version: 2
   Example_Workflow:
     jobs:
-      - Hello-World
-      - I-Have-Code:
-          requires:
-            - Hello-World
-      - Test:
-          requires:
-            - I-Have-Code
-      - Now-Complete:
-          requires:
-            - Test
+      - Test
