@@ -45,6 +45,11 @@ jobs:
     docker:
       - image: circleci/node:10-browsers
     steps:
+      - checkout
+      - run:
+          name: npm i
+          command: |
+            npm i
       - run:
           name: npm build:README
           command: |
