@@ -41,7 +41,7 @@ jobs:
           name: Running tests
           command: |
             npm run test
-  Build-README:
+  Readme:
     docker:
       - image: circleci/node:10-browsers
     steps:
@@ -63,6 +63,6 @@ workflows:
   Example_Workflow:
     jobs:
       - Test
-      - Build-README:
+      - Readme:
         requires:
           - Test
