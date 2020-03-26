@@ -65,4 +65,4 @@ workflows:
       - Test
       - Build-README:
         requires:
-          - Build-README
+          - Test
