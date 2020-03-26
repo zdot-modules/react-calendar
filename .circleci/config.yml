@@ -63,6 +63,6 @@ workflows:
   Example_Workflow:
     jobs:
       - Test
-      - Build-README
+      - Build-README:
         requires:
-            - Build-README
+          - Build-README
