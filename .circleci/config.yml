@@ -71,3 +71,6 @@ workflows:
       - Readme:
           requires:
             - Test
+          filters:
+            branches:
+              only: master
