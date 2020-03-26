@@ -41,6 +41,14 @@ jobs:
           name: Running tests
           command: |
             npm run test
+  Build-README:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - run:
+          name: npm build:README
+          command: |
+            npm run build:README
   Now-Complete:
     docker:
       - image: alpine:3.7
@@ -55,3 +63,6 @@ workflows:
   Example_Workflow:
     jobs:
       - Test
+      - Build-README
+        requires:
+            - Build-README

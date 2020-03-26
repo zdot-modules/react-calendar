@@ -12,6 +12,10 @@
 <!-- /BADGES -->
 
 [![danwoods](https://circleci.com/gh/danwoods/react-calendar-sample/tree/master.svg?style=shield)](https://circleci.com/gh/danwoods/react-calendar-sample/tree/master)
+![Statements](./assets/badge-statements.svg)
+![Branches](./assets/badge-branches.svg)
+![Functions](./assets/badge-functions.svg)
+![Lines](./assets/badge-lines.svg)
 
 <!-- DESCRIPTION/ -->
 
