@@ -1,6 +1,6 @@
 {
   "name": "react-calendar-sample",
-  "version": "1.0.0",
+  "version": "0.0.0-dev",
   "description": "A zero-dependency calendar component with 100% test and type coverage.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "deploy:storybook": "storybook-to-ghpages",
     "build:storybook": "build-storybook",
-    "build:README": "projectz compile",
+    "build:README": "projectz compile && npm run test && jest-coverage-badges --output ./assets",
     "flow": "flow",
     "lint": "eslint \"./src/**\""
   },
@@ -45,6 +45,7 @@
     "flow-bin": "^0.120.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
+    "jest-coverage-badges": "^1.1.2",
     "prettier": "^1.19.1",
     "projectz": "^1.19.0",
     "react-jss": "^10.0.3",

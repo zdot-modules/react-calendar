@@ -1,32 +1,5 @@
 version: 2.1
 jobs:
-  Hello-World:
-    docker:
-      - image: alpine:3.7
-    steps:
-      - run:
-          name: Hello World
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-  I-Have-Code:
-    docker:
-      - image: alpine:3.7
-    steps:
-      - checkout
-      - run:
-          name: Code Has Arrived
-          command: |
-            ls -al
-            echo '^^^That should look familiar^^^'
-  Run-With-Node:
-    docker:
-      - image: circleci/node:10-browsers
-    steps:
-      - run:
-          name: Running In A Container With Node
-          command: |
-            node -v
   Test:
     docker:
       - image: circleci/node:10-browsers
@@ -41,6 +14,26 @@ jobs:
           name: Running tests
           command: |
             npm run test
+  Readme:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+          name: npm i
+          command: |
+            npm i
+      - run:
+          name: npm build:README
+          command: |
+            npm run build:README
+  Release:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run: npx semantic-release
   Now-Complete:
     docker:
       - image: alpine:3.7
@@ -55,3 +48,15 @@ workflows:
   Example_Workflow:
     jobs:
       - Test
+      - Release:
+          requires:
+            - Test
+          filters:
+            branches:
+              only: master
+      - Readme:
+          requires:
+            - Release
+          filters:
+            branches:
+              only: master

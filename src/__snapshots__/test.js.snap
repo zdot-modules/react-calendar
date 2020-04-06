@@ -580,7 +580,7 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
     className="TEST-myh-root"
   >
     <h1>
-      March 2020
+      April 2020
     </h1>
   </div>
   <div
@@ -631,425 +631,13 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
     >
       <div
         className="TEST-day-root "
-        title="March 1, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            1
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 2, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            2
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 3, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            3
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 4, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            4
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 5, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            5
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 6, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            6
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 7, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            7
-          </h6>
-        </div>
-      </div>
-    </div>
-    <div
-      className="TEST-week-root TEST-month-week-root"
-      data-component-id="week"
-    >
-      <div
-        className="TEST-day-root "
-        title="March 8, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            8
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 9, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            9
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 10, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            10
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 11, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            11
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 12, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            12
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 13, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            13
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 14, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            14
-          </h6>
-        </div>
-      </div>
-    </div>
-    <div
-      className="TEST-week-root TEST-month-week-root"
-      data-component-id="week"
-    >
-      <div
-        className="TEST-day-root "
-        title="March 15, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            15
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 16, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            16
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 17, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            17
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 18, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            18
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 19, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            19
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 20, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            20
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 21, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            21
-          </h6>
-        </div>
-      </div>
-    </div>
-    <div
-      className="TEST-week-root TEST-month-week-root"
-      data-component-id="week"
-    >
-      <div
-        className="TEST-day-root "
-        title="March 22, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            22
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 23, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            23
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 24, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            24
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 25, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            25
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 26, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            26
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 27, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            27
-          </h6>
-        </div>
-      </div>
-      <div
-        className="TEST-day-root TEST-week-day-root"
-        title="March 28, 2020"
-      >
-        <div
-          className="TEST-day-content "
-        >
-          <h6
-            className="TEST-day-date-label "
-          >
-            28
-          </h6>
-        </div>
-      </div>
-    </div>
-    <div
-      className="TEST-week-root TEST-month-week-root"
-      data-component-id="week"
-    >
-      <div
-        className="TEST-day-root "
         title="March 29, 2020"
       >
         <div
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label "
+            className="TEST-day-date-label TEST-different-month"
           >
             29
           </h6>
@@ -1063,7 +651,7 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label "
+            className="TEST-day-date-label TEST-different-month"
           >
             30
           </h6>
@@ -1077,7 +665,7 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label "
+            className="TEST-day-date-label TEST-different-month"
           >
             31
           </h6>
@@ -1091,7 +679,7 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label TEST-different-month"
+            className="TEST-day-date-label "
           >
             1
           </h6>
@@ -1105,7 +693,7 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label TEST-different-month"
+            className="TEST-day-date-label "
           >
             2
           </h6>
@@ -1119,7 +707,7 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label TEST-different-month"
+            className="TEST-day-date-label "
           >
             3
           </h6>
@@ -1133,9 +721,421 @@ exports[`Main calendar Basic Calendar without a provided date 1`] = `
           className="TEST-day-content "
         >
           <h6
-            className="TEST-day-date-label TEST-different-month"
+            className="TEST-day-date-label "
           >
             4
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      className="TEST-week-root TEST-month-week-root"
+      data-component-id="week"
+    >
+      <div
+        className="TEST-day-root "
+        title="April 5, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            5
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 6, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            6
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 7, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            7
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 8, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            8
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 9, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            9
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 10, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            10
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 11, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            11
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      className="TEST-week-root TEST-month-week-root"
+      data-component-id="week"
+    >
+      <div
+        className="TEST-day-root "
+        title="April 12, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            12
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 13, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            13
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 14, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            14
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 15, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            15
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 16, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            16
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 17, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            17
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 18, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            18
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      className="TEST-week-root TEST-month-week-root"
+      data-component-id="week"
+    >
+      <div
+        className="TEST-day-root "
+        title="April 19, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            19
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 20, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            20
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 21, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            21
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 22, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            22
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 23, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            23
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 24, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            24
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 25, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            25
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      className="TEST-week-root TEST-month-week-root"
+      data-component-id="week"
+    >
+      <div
+        className="TEST-day-root "
+        title="April 26, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            26
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 27, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            27
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 28, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            28
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 29, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            29
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="April 30, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label "
+          >
+            30
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="May 1, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label TEST-different-month"
+          >
+            1
+          </h6>
+        </div>
+      </div>
+      <div
+        className="TEST-day-root TEST-week-day-root"
+        title="May 2, 2020"
+      >
+        <div
+          className="TEST-day-content "
+        >
+          <h6
+            className="TEST-day-date-label TEST-different-month"
+          >
+            2
           </h6>
         </div>
       </div>
