@@ -33,7 +33,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npx semantic-release --dry-run
+      - run: npx semantic-release --dry-run --plugins ['@semantic-release/commit-analyzer', '@semantic-release/release-notes-generator', '@semantic-release/github']
   Now-Complete:
     docker:
       - image: alpine:3.7
