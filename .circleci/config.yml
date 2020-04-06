@@ -51,6 +51,9 @@ workflows:
       - Release:
           requires:
             - Test
+          filters:
+            branches:
+              only: master
       - Readme:
           requires:
             - Release
