@@ -12,6 +12,7 @@
 <!-- /BADGES -->
 
 [![danwoods](https://circleci.com/gh/danwoods/react-calendar-sample/tree/master.svg?style=shield)](https://circleci.com/gh/danwoods/react-calendar-sample/tree/master)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![Statements](./assets/badge-statements.svg)
 ![Branches](./assets/badge-branches.svg)
 ![Functions](./assets/badge-functions.svg)
