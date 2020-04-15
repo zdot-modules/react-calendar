@@ -4,13 +4,14 @@
   "description": "A zero-dependency calendar component with 100% test and type coverage.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "deploy:storybook": "storybook-to-ghpages",
-    "build:storybook": "build-storybook",
     "build:README": "projectz compile && npm run test && jest-coverage-badges --output ./assets",
+    "build:storybook": "build-storybook",
+    "commit": "git-cz",
+    "deploy:storybook": "storybook-to-ghpages",
     "flow": "flow",
-    "lint": "eslint \"./src/**\""
+    "lint": "eslint \"./src/**\"",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "@storybook/storybook-deployer": "^2.8.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "cz-conventional-changelog": "^3.1.0",
     "date-fns": "^2.10.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
@@ -62,5 +64,10 @@
       "daviddm",
       "daviddmdev"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
