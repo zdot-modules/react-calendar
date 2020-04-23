@@ -14,19 +14,6 @@ jobs:
           name: Running tests
           command: |
             npm run test
-  Readme:
-    docker:
-      - image: circleci/node:10-browsers
-    steps:
-      - checkout
-      - run:
-          name: npm i
-          command: |
-            npm i
-      - run:
-          name: npm build:README
-          command: |
-            npm run build:README
   Release:
     docker:
       - image: circleci/node:10
@@ -34,7 +21,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npx semantic-release
-      - run: npm run deploy:storybook
+      - run: npm run deploy:storybook -- --ci
   Now-Complete:
     docker:
       - image: alpine:3.7
@@ -52,12 +39,6 @@ workflows:
       - Release:
           requires:
             - Test
-          filters:
-            branches:
-              only: master
-      - Readme:
-          requires:
-            - Release
           filters:
             branches:
               only: master
