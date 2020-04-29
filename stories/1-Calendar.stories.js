@@ -24,7 +24,7 @@ import PrevIcon from '@material-ui/icons/ChevronLeft'
 import NextIcon from '@material-ui/icons/ChevronRight'
 import pkg from '../package.json'
 
-console.info(`${pkg.name} ${pkg.version}`)
+console.info(`[ ${pkg.name} ${pkg.version} ]`)
 
 export default {
   title: 'Calendar',
