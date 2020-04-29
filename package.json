@@ -6,13 +6,13 @@
   "scripts": {
     "build:coverage-badges": "jest-coverage-badges --output ./assets",
     "build:storybook": "build-storybook",
+    "build": "webpack",
     "commit": "git-cz",
     "deploy:storybook": "storybook-to-ghpages",
     "flow": "flow",
     "lint": "eslint \"./src/**\"",
     "storybook": "start-storybook -p 6006",
-    "test": "jest",
-    "build": "webpack"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
