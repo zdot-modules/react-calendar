@@ -34,18 +34,18 @@ export default {
 export const Default = () => <Calendar />
 
 const createWithNavigationClasses = createUseStyles({
-  root: {
-    width: '256px',
-    marginTop: '26px'
-  },
   navigation: {
+    boxSizing: 'border-box',
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: '-46px'
+    paddingTop: 26,
+    position: 'absolute',
+    width: 'calc(100% - 20px)'
   },
   navigationButton: {
     cursor: 'pointer',
-    zIndex: 1
+    zIndex: 1,
+    marginBottom: '-46px'
   }
 })
 
