@@ -66,7 +66,7 @@ export const Week = ({
         key={item.toString()}
         date={item}
         dateLabelClassName={className}
-        rootClassName={idx > 0 ? `${CLASSNAME}-week-day-root` : null}
+        rootClassName={idx > 0 ? `${CLASSNAME}-week-day-root` : ''}
       />
     )
   }
